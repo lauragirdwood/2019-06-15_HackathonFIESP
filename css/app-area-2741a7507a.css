@@ -1651,6 +1651,11 @@ a:hover
   padding:0 4px;
 }
 
+#perfil li::before{
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+}
+
 #portal-siteactions
 {
   border-bottom:1px dotted #d5d5d5;
