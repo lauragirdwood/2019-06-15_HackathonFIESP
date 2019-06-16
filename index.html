@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Área do Cidadão - gov.br - v1.0.10</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/app-area-2741a7507a.min.css">
+  </head>
+  <body>
+    <!-- barra de governo-->
+    <a tabindex="0" href="#conteudo" class="sr-only sr-only-focusable">Pular para o conteúdo principal</a>
+    <div aria-hidden="true" id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
+      <ul aria-hidden="true" id="menu-barra-temp" style="list-style:none;">
+        <li aria-hidden="true" style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED"><a
+            href="http://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do
+            Governo Brasileiro</a></li>
+        <li aria-hidden="true"><a style="font-family:sans,sans-serif; text-decoration:none; color:white;" href="http://epwg.governoeletronico.gov.br/barra/atualize.html">Atualize
+            sua Barra de Governo</a></li>
+      </ul>
+    </div>
+    <!-- cabeçalho idg-->
+    <header id="cabecalho">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 hidden-xs hidden-sm">
+            <!-- links de atalho-->
+            <ul id="acessibilidade">
+              <li><span></span></li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-right">
+            <!-- links de acessibilidade-->
+            <ul id="portal-siteactions">
+              <li id="siteaction-acessibilidade"><a accesskey="5" href="http://www.planejamento.gov.br/acessibilidade">Acessibilidade</a></li>
+              <li id="siteaction-contraste"><a accesskey="6" href="">Alto Contraste</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <!-- logo-->
+            <div id="logo"><a id="portal-logo" href="/area-cidadao">
+                <img src="img/Brasil_Cidadao_logo.png" width="150" > </br>
+                <span id="portal-description">Governo Federal</span></a></div>
+          </div>
+        </div>
+      </div>
+      </header>
+
+      <article>
+            <div class="container">
+              <!-- breadcrumbs-->
+              <sui-render value="menu">
+                <div class="row">
+                <div class="col-md-8">
+                  <sui-breadcrumbs></sui-breadcrumbs>
+                </div>
+                <div class="col-md-4">
+                  <task-bar default-avatar="../img/default-avatar.png"></task-bar>
+                </div>
+                </div>
+              </sui-render>
+              <!-- área de conteúdo-->
+              <div class="row">
+                <sui-render value="menu">
+                    <!-- abrir menu para mobile-->
+                    <div class="visible-xs visible-sm" id="menu-mobile">
+                      <div class="container text-right">
+                        <button class="collapsed" type="button" data-toggle="collapse" data-target="#menu"><span class="fa fa-bars"></span>Menu</button>
+                      </div>
+                    </div>
+                    <!-- coluna navegação--> 
+                    <aside class="col-md-3" ng-cloak><a id="navegacao"></a> 
+                      <!-- navegação--> 
+                      <div class="collapse" id="menu"> 
+                        <nav>
+                          <dl class="menu"> 
+                            <form novalidate name="form" role="form"> 
+                              <span class="help-block">A sessão expira em : <sui-session-countdown name="sessionCountdown" trigger-url="/finalizarSessao"></sui-session-countdown></span> 
+                            </form> 
+                            <dt class="collapsed" data-toggle="collapse" data-target="#menu-1">Minha área<span class="fa fa-chevron-up"></dt> 
+                            <dd class="collapse" id="menu-1"> 
+                            <ul> 
+                              <li><a href="#/inicio">Inicio</a></li> 
+                              <li><a href="#/alterarCadastro">Alteração de dados cadastrais</a></li> 
+                              <li><a href="#/alterarSenha">Alteração de senha</a></li> 
+                              <li><a href="#/ganharConfiabilidade">Obter confiabilidade cadastral</a></li> 
+                              <li><a href="#/revogarAcesso">Ver Autorizações de Uso de Dados Pessoais</a></li> 
+                              <li><a href="#/recuperarDni">Recuperar DNI</a></li>
+                              <li><a href="#/ganharConfiabilidadePorCertificadoDigitalCnpj">CNPJ</a></li>
+                              <li><a href="#/logout" >Sair</a></li> 
+                            </ul> 
+                            </dd> 
+                            <br> 
+                            <dt class="collapsed" data-toggle="collapse" data-target="#menu-2">Serviços do Governo<span class="fa fa-chevron-up"></dt> 
+                            <dd class="collapse" id="menu-2"> 
+                            <ul> 
+                              <li><a target="_blank" href="http://servicos.gov.br">Portal de Serviços</a></li> 
+                            </ul> 
+                            </dd> 
+                          </dl> 
+                        </nav>
+                      </div> 
+                    </aside> 
+                </sui-render>
+                <!-- coluna conteúdo-->
+                <section class="col-md-9"><a id="conteudo"></a>
+                  <sui-global-alert-message></sui-global-alert-message>
+                  <div ng-view></div>            
+                </section>
+              </div>
+              <!-- subir página-->
+              <sui-render value="menu">
+                <div class="row">
+                  <footer class="coluna" id="subir"><a href="" onClick="window.scrollTo(0, 0);"><span class="fa fa-caret-up"></span>Voltar para o topo</a></footer>
+                </div>
+              </sui-render>
+            </div>
+          </article>
+          <!-- mapa do site-->
+          <a id="rodape"></a>
+          <footer id="mapa">
+            <div class="container">
+              <div class="row">
+              </div>
+            </div>
+          </footer>
+          <!-- rodape idg-->
+          <div id="footer-brasil"></div>
+          <script src="app/app-24d327fd24.min.js"></script>
+      
+          <!-- scripts-->
+          <!-- barra de governo-->
+          <script defer="defer" src="//barra.brasil.gov.br/barra_2.0.js" type="text/javascript"></script><!--    <script defer="defer" src="../css/barra.js" type="text/javascript"></script> -->
+          <!-- jquery-->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!--    <script src="../lib/jquery/jquery.min.js"></script> -->
+          <!-- bootstrap-->
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      
+      <!-- 
+        Script do menu lateral
+      -->
+      <script>
+            var wSize = $(window).width();
+            var size = wSize < 960 ? 'mobile' : 'desktop'
+            var menu = $('#menu');
+            var menus = menu.find('.menu');
+            
+            desktop(size);
+            
+            $(window).resize(function() {
+                if ($(window).width() < 960) {
+                size = 'mobile';
+                mobile(size);
+                }
+                else {
+                size = 'desktop';
+                desktop(size);
+                }
+            });
+            
+            function desktop (size) {
+                if (size === 'desktop') {
+                $(menu).removeClass().css('height', 'auto');
+                $(menus).find('dt').removeClass();
+                $(menus).find('dd').addClass('in').css('height', 'auto');
+                }
+            }
+            
+            function mobile (size) {
+                if (size === 'mobile') {
+                $(menu).addClass('collapse');
+                $(menus).find('dt').addClass('collapsed');
+                $(menus).find('dd').removeClass('in');
+                }
+            }
+            
+            $('#siteaction-contraste a').click(function() {
+                $('body').toggleClass('contraste');
+            });
+      </script> 
+        
+    </body>
+</html>
