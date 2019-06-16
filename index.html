@@ -115,28 +115,55 @@
                     </aside> 
                 </sui-render>
                 <!-- coluna conteúdo-->
-                <section class="container-md-9 d-flex">
+                <section class="container">
                     <h3>Seja bem-vindo(a) Laura Xavier ao seu perfil no gov.br</h3>
                                       
-                    <div class="col-md-">
-                            <ul id="perfil" style="list-style-type: none;">
-                                <a><li><img src="img/icone-saude.png" height="42" width="42">  Saúde pública, meus exames</li></a>
-                                
-                                <a><li><img src="img/icone-educacao.png" height="42" width="42">   Meus diplomas e certificados</li></a>
-                                
-                                <a><li><img src="img/icone-educacao.png" height="42" width="42"></li></a>
-                                
-                                <a><li><img src="img/icone-educacao.png" height="42" width="42"></li></a>
-                            </ul>  
-                        </div>
-                    <div class="row">                        
-                                                   
-                        <img src="img/Meus_Dados.png" ng-class="{'img-rounded center-block': vm.temSeloPrevidencia, 'img-rounded center-block img-not-enable': !vm.temSeloPrevidencia}" alt="Cadastro no INSS" width="158" height="159" class="img-rounded center-block"><br>
-                        <!-- ngIf: !vm.temSeloPrevidencia -->        
-                            <!-- ngIf: vm.temSeloPrevidencia --><a ng-href="https://meu.inss.gov.br" class="btn btn-default btn-block ng-scope" ng-if="vm.temSeloPrevidencia" href="https://meu.inss.gov.br">VER MEUS DADOS</a><!-- end ngIf: vm.temSeloPrevidencia -->                                        
+                    <div class="row col-lg-9">
+                                <div id="foto1" class="col-lg-1">
+                                  <img src="img/icone-educacao.png" height=100% width="42">
+                                </div>
+                                <div class="col-lg-8">
+                                  <h4 id="text"> Meus diplomas e certificados </h4> 
+                                </div>
                     </div>
-                  <sui-global-alert-message></sui-global-alert-message>
-                  <div ng-view></div>            
+
+                    <div class="row col-lg-9">
+                        <div id="foto1" class="col-lg-1">
+                          <img src="img/empreendedorismo.png" height=100% width="42">
+                        </div>
+                        <div class="col-lg-8">
+                          <h4 id="text"> CNPJ, empreendedorismo </h4> 
+                        </div>
+                    </div>
+
+                    <div class="row col-lg-9">
+                        <div id="foto1" class="col-lg-1">
+                          <img src="img/saude.png" height=100% width="42">
+                        </div>
+                        <div class="col-lg-8">
+                          <h4 id="text"> Saúde publica, Meus exames </h4> 
+                        </div>
+                    </div>
+                    
+                    <div class="row col-lg-9">
+                        <div id="foto1" class="col-lg-1">
+                          <img src="img/veiculos.png" height=100% width="42">
+                        </div>
+                        <div class="col-lg-8">
+                          <h4 id="text"> Veículos, CNH, multas, IPVA </h4> 
+                        </div>
+                    </div>
+                    
+                    <style>  
+                      #foto1 {
+                        margin-bottom: 3em;
+                        margin-top: 3em;
+                      }
+                      #text {
+                        margin-top: 52px;
+                        
+                      }
+                    </style>
                 </section>
               </div>
               <!-- subir página-->
