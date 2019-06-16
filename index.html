@@ -103,7 +103,8 @@
                             <dt class="collapsed" data-toggle="collapse" data-target="#menu-2">Serviços do Governo<span class="fa fa-chevron-up"></dt> 
                             <dd class="collapse" id="menu-2"> 
                             <ul> 
-                              <li><a target="_blank" href="http://servicos.gov.br">Portal de Serviços</a></li> 
+                              <li><a target="_blank" href="http://servicos.gov.br">Portal de Serviços</a></li>
+
                             </ul> 
                             </dd> 
                           </dl> 
@@ -113,6 +114,12 @@
                 </sui-render>
                 <!-- coluna conteúdo-->
                 <section class="col-md-9"><a id="conteudo"></a>
+                    <div class="row">
+                        <h3>Perfil Cidadão</h3>         
+                        <img src="img/Meus_Dados.png" ng-class="{'img-rounded center-block': vm.temSeloPrevidencia, 'img-rounded center-block img-not-enable': !vm.temSeloPrevidencia}" alt="Cadastro no INSS" width="158" height="159" class="img-rounded center-block"><br>
+                        <!-- ngIf: !vm.temSeloPrevidencia -->        
+                            <!-- ngIf: vm.temSeloPrevidencia --><a ng-href="https://meu.inss.gov.br" class="btn btn-default btn-block ng-scope" ng-if="vm.temSeloPrevidencia" href="https://meu.inss.gov.br">VER MEUS DADOS</a><!-- end ngIf: vm.temSeloPrevidencia -->                                        
+                    </div>
                   <sui-global-alert-message></sui-global-alert-message>
                   <div ng-view></div>            
                 </section>
