@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/app-area-2741a7507a.css">
+    <link rel="stylesheet" href="css/app-area-2741a7507a.min.css">
   </head>
   <body>
     <!-- barra de governo-->
@@ -80,7 +80,7 @@
                     <!-- coluna navegação--> 
                     <aside class="col-md-3" ng-cloak><a id="navegacao"></a> 
                       <!-- navegação--> 
-                      <div class="collapse" id="menu"> 
+                      <div class="collapse" id="menu" style="margin-right: 2em;"> 
                         <nav>
                           <dl class="menu"> 
                             <form novalidate name="form" role="form"> 
@@ -115,9 +115,29 @@
                     </aside> 
                 </sui-render>
                 <!-- coluna conteúdo-->
-                <section class="col-md-9"><a id="conteudo"></a>
+                <section class="container-md-9 d-flex">
+                    <h3>Seja bem-vindo(a) Laura Xavier ao seu perfil no gov.br</h3>
+                    
                     <div class="row">
-                        <h3>Perfil Cidadão</h3>         
+                        <div class="col-md-2">
+                            <img src="img/icone-saude.png" class="col-md-2  "> 
+                        </div>
+                        <div class="col-md-8">
+                            <p>Saúde pública, meus exames</p>
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="col-md-">
+                            <ul>
+                                <li style="list-style: none; width: 2em"><img src=""></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>  
+                        </div>
+                    <div class="row">                        
+                                                   
                         <img src="img/Meus_Dados.png" ng-class="{'img-rounded center-block': vm.temSeloPrevidencia, 'img-rounded center-block img-not-enable': !vm.temSeloPrevidencia}" alt="Cadastro no INSS" width="158" height="159" class="img-rounded center-block"><br>
                         <!-- ngIf: !vm.temSeloPrevidencia -->        
                             <!-- ngIf: vm.temSeloPrevidencia --><a ng-href="https://meu.inss.gov.br" class="btn btn-default btn-block ng-scope" ng-if="vm.temSeloPrevidencia" href="https://meu.inss.gov.br">VER MEUS DADOS</a><!-- end ngIf: vm.temSeloPrevidencia -->                                        
